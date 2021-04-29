@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids 2</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: grey;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: lightyellow;
+            color: black;
+            font-size: 18px;
+            padding: 5px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 2fr);
+
+            /* Three types of grid-gaps 1.grid-gap 2.grid-column-gap 3.grid-row-gap */
+            grid-gap: 1em;
+            grid-column-gap: 3em;
+            grid-row-gap: 1em;
+        }
+        
+        .box:first-child {
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+
+            /* Shorthand */
+            grid-column: 1/ span 3;
+            grid-row: 1/ span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <!-- div.box.box-$*10{This is Box-$} -->
+        <div class="box box-1">This is Box-1</div>
+        <div class="box box-2">This is Box-2</div>
+        <div class="box box-3">This is Box-3</div>
+        <div class="box box-4">This is Box-4</div>
+        <div class="box box-5">This is Box-5</div>
+        <div class="box box-6">This is Box-6</div>
+        <div class="box box-7">This is Box-7</div>
+        <div class="box box-1">This is Box-1</div>
+        <div class="box box-2">This is Box-2</div>
+        <div class="box box-3">This is Box-3</div>
+        <div class="box box-4">This is Box-4</div>
+        <div class="box box-5">This is Box-5</div>
+        <div class="box box-6">This is Box-6</div>
+        <div class="box box-7">This is Box-7</div>
+    </div>
+</body>
+</html>

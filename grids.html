@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: cornflowerblue;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: darkred;
+            color: azure;
+            font-size: 1.2rem;
+
+            padding: .4em;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+
+            /* grid-template-columns: 400px 250px 300px; */
+            /* grid-template-columns: 400px 250px auto; */
+            /* grid-template-columns: auto 250px 300px; */
+            /* grid-template-columns: 400px auto 300px; */
+
+            /* grid-template-columns: 200px 500px; */
+            /* grid-template-columns: 200px auto; */
+            /* grid-template-columns: auto 500px; */
+
+            /* Better to use 'fr' units */
+            /* xfr takes x parts of the height or width */
+            /* Examples */
+            /* grid-template-columns: 4fr 6fr 3fr; */
+            grid-template-columns: 1fr auto 2fr;
+
+            /* grid-template-columns: repeat (3, 100px); */
+
+            grid-gap: 2rem;
+
+            grid-template-rows: 2fr 4fr;
+            /* 👆 is for 1st 2 rows, to control remaining rows do as follows */
+            grid-auto-rows: 3fr;
+
+            /* grid-template-rows: 2fr 4fr 3fr; */
+            /* 👆 is for 1st 2 rows, to control remaining rows do as follows */
+            /* grid-auto-rows: 3fr; */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <!-- div.box.box-$*15{This is Box-$} -->
+        <div class="box box-1">This is Box-1</div>
+        <div class="box box-2">This is Box-2</div>
+        <div class="box box-3">This is Box-3</div>
+        <div class="box box-4">This is Box-4</div>
+        <div class="box box-5">This is Box-5</div>
+        <div class="box box-6">This is Box-6</div>
+        <div class="box box-7">This is Box-7</div>
+        <div class="box box-8">This is Box-8</div>
+        <div class="box box-9">This is Box-9</div>
+        <div class="box box-10">This is Box-10</div>
+        <div class="box box-11">This is Box-11</div>
+        <div class="box box-12">This is Box-12</div>
+        <div class="box box-13">This is Box-13</div>
+        <div class="box box-14">This is Box-14</div>
+        <div class="box box-15">This is Box-15</div>
+    </div>
+</body>
+</html>

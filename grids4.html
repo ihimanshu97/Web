@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids 4</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+                'header header header header'
+                'logo navbar navbar navbar'
+                'section-1 section-1 section-1 aside'
+                'section-2 section-2 section-2 aside'
+                'section-3 section-3 section-3 aside'
+                'footer footer footer footer'
+            ;
+        }
+
+        .item {
+            background-color: darkcyan;
+            color: white;
+            border: 2px solid black;
+            padding: 0.5rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #header {
+            grid-area: header;
+        }
+
+        #logo {
+            grid-area: logo;
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section-1 {
+            grid-area: section-1;
+        }
+
+        #section-2 {
+            grid-area: section-2;
+        }
+
+        #section-3 {
+            grid-area: section-3;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item" id="header">Header</div>
+        <div class="item" id="logo">Logo</div>
+        <div class="item" id="navbar">Navbar</div>
+        <div class="item" id="section-1">Section-1</div>
+        <div class="item" id="section-2">Section-2</div>
+        <div class="item" id="section-3">Section-3</div>
+        <div class="item" id="aside">Aside</div>
+        <div class="item" id="footer">Footer</div>
+    </div>
+</body>
+</html>

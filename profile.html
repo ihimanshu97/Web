@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            background-color: darkslategrey;
+        }
+
+        .container {
+            background-color: darkgrey;
+            padding: 20px;
+            padding-top: 0;
+            border: 5px red solid;
+            margin: auto;
+            width: 75%;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: wheat;
+        }
+
+        .block-1,
+        .block-2,
+        .block-3 {
+            background-color: teal;
+            padding: 10px;
+            border: 2px black solid;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 20px;
+            height: 28%;
+        }
+
+        .form-group {
+            background-color: blanchedalmond;
+            padding: 5px;
+            margin: 8px;
+            border: 2px black solid;
+            border-radius: 5px;
+        }
+
+        .form-group label {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: block;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 7px;
+            border-radius: 3px;
+            border: 2px solid steelblue;
+            margin-top: 5px;
+            width: 35%;
+        }
+
+        .form-group input[type="radio"] {
+            padding: 2px;
+            width: 5%;
+        }
+
+        .button {
+            font-family: sans-serif;
+            font-weight: bolder;
+            font-size: 16px;
+            color: whitesmoke;
+            margin: 20px;
+            border: gray solid;
+            border-radius: 7px;
+            padding: 15px;
+            width: 25%;
+            background-color: rgb(31, 48, 197);
+        }
+
+        .button:hover {
+            background-color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Details</h1>
+    <div class="container">
+        <form>
+            <div class="block-1">
+                <h2>Personal Details</h2>
+                <div class="form-group">
+                    <label>First Name:</label>
+                    <input type="text" name="fname" placeholder="First Name" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name:</label>
+                    <input type="text" name="lname" placeholder="Last Name" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label>Birthday:</label>
+                    <input type="date" name="bday" placeholder="Birthday:" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" required>Male
+                    <input type="radio" name="gender" required>Female
+                    <input type="radio" name="gender" required>Transgender
+                </div>
+            </div>
+            <div class="block-2">
+                <h2>Residential Details</h2>
+                <div class="form-group">
+                    <label>Address:</label>
+                    <textarea name="address" cols="30" rows="5" placeholder="Address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Village:</label>
+                    <input type="text" name="village" placeholder="Village" required>
+                </div>
+                <div class="form-group">
+                    <label>District:</label>
+                    <input type="text" name="district" placeholder="District" required>
+                </div>
+                <div class="form-group">
+                    <label>State:</label>
+                    <input name="state" list="states" placeholder="State" required>
+                    <datalist id="states">
+                        <option value="Maharashtra">
+                        <option value="Telangana">
+                        <option value="Karnataka">
+                        <option value="Gujarat">
+                    </datalist>
+                </div>
+            </div>
+            <div class="block-3">
+                <h2>Contact Details</h2>
+                <div class="block-3-1">
+                    <h3>Personal</h3>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number:</label>
+                        <input type="number" name="phn" placeholder="Mobile Number" required>
+                    </div>
+                </div>
+                <div class="block-3-2">
+                    <h3>Parent/Guardian</h3>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number:</label>
+                        <input type="number" name="phn" placeholder="Mobile Number" required>
+                    </div>
+                </div>
+            </div>
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

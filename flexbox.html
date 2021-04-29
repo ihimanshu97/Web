@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            background-color: azure;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            background-color: darksalmon;
+            height: 500px;
+            width: 100%;
+            border: 2px solid red;
+            margin: auto;
+            /* Flex properties for a flex-container */
+            display: flex;
+
+            /* flex-direction */
+            /* flex-direction: row; <default> */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap */
+            /* flex-wrap: nowrap; <nowrap> */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* Shorthand  */
+                /* flex-flow: <'flex-direction'> || <'flex-wrap'>; */
+                /* flex-flow: row-reverse wrap-reverse; */
+            /* Try more examples */
+
+            /* justify-content: center; */
+
+            /* justify-content: space-between; */
+            /* adds space b/w items */
+
+            /* justify-content: space-evenly; */
+            /* adds space b/w items including border*/
+
+            /* justify-content: space-around; */
+            /* adds space around every items evenly */
+
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: stretch; */
+        }
+        .item {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            border: 2px solid silver;
+            padding: 5px;
+            background-color: cornflowerblue;
+        }
+        #item-1 {
+            /* Flex properties for a flex-item */
+            /* greater the order value, later the apperance/position of item */
+            /* order: 3; */
+
+            /* flex-grow: 3; <non -ve, flex-shrink instead of -ve values>*/ 
+
+            /* flex-shrink: 2; */
+
+            /* flex-basis: 250px; */
+            /* can be used to change default (or) original size */
+            /* 
+                when flex-direction is row, flex-basis controls(or changes) width 
+                when flex-direction is column, flex-basis controls(or changes) height 
+            */
+            /* 
+                In simple words, 250px(i.e, the new value set by us) acts as width if flex-direction is row 
+                else acts as height if flex-direction is column 
+            */
+
+            /* Shorthand  */
+                /* flex: <'flex-grow'> <'flex-shrink'> || <'flex-basis'>; */
+                /* flex: 2 3 110px; */
+            /* Try more examples */
+
+            /* align-self: center; */
+            /* align-self: flex-end; */
+            /* align-self: flex-start; <default>*/
+            align-self: flex-start;
+        }
+        #item-2 {
+            /* Flex properties for a flex-item */
+            /* order: 1; */
+            /* flex-grow: 3; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 180px; */
+            /* flex: 2 3 110px; */
+            align-self: center;
+        }
+        #item-3 {
+            /* Flex properties for a flex-item */
+            /* order: 2; */
+            /* flex-grow: 2; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 90px; */
+            /* flex: 2 3 110px; */
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">Box-1</div>
+        <div class="item" id="item-2">Box-2</div>
+        <div class="item" id="item-3">Box-3</div>
+        <div class="item" id="item-4">Box-4</div>
+        <div class="item" id="item-5">Box-5</div>
+        <div class="item" id="item-6">Box-6</div>
+    </div>
+</body>
+</html>
